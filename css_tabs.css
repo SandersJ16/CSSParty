@@ -4,18 +4,25 @@ ul.tab-list {
 
 [id^=tab] {
     list-style-type: none;
-    position: absolute;
+    position: relative;
     width: 100%;
     
+    
+
     height: 150px;
     min-height: 150px;
     overflow:hidden;
+    
 }
 [id^=tab]:first-child {
     z-index: 1;
 }
 [id^=tab]:target {
     z-index: 2;
+}
+
+li[id^=tab] + li[id^=tab]{
+    margin-top: -150px;
 }
 
 #tab1, a[href="#tab1"] {
